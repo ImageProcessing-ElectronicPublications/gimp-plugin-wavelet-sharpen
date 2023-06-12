@@ -1,9 +1,9 @@
-/* 
+/*
  * Wavelet sharpen GIMP plugin
- * 
+ *
  * plugin.h
  * Copyright 2008 by Marco Rossini
- * 
+ *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2+
  * as published by the Free Software Foundation.
@@ -40,10 +40,10 @@
 
 void query (void);
 void run (const gchar * name, gint nparams, const GimpParam * param,
-		 gint * nreturn_vals, GimpParam ** return_vals);
+          gint * nreturn_vals, GimpParam ** return_vals);
 void wavelet_sharpen (float *fimg[3], unsigned int width,
-			     unsigned int height, double amount,
-			     double radius, float a, float b);
+                      unsigned int height, double amount,
+                      double radius, float a, float b);
 void sharpen (GimpDrawable * drawable, GimpPreview * preview);
 void rgb2ycbcr (float *r, float *g, float *b);
 void ycbcr2rgb (float *y, float *cb, float *cr);
@@ -57,12 +57,12 @@ extern GimpPlugInInfo PLUG_IN_INFO;
 
 typedef struct
 {
-  double sharpen_amount;
-  double sharpen_radius;
-  gboolean luminance_only;
-  gboolean show_preview;
-  float times[3];
-  gint winxsize, winysize;
+    double sharpen_amount;
+    double sharpen_radius;
+    gboolean luminance_only;
+    gboolean show_preview;
+    float times[3];
+    gint winxsize, winysize;
 } wavelet_settings;
 
 extern wavelet_settings settings;
